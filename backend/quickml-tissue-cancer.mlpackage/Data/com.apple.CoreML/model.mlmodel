@@ -1,7 +1,7 @@
-Ï
-
-inputs*
-‡‡†ÄR
+Á
+
+image
+"‡‡R
 input
 *
 (†ÄR
@@ -10,16 +10,16 @@
 †Ä¢°¢3
 #com.github.apple.coremltools.sourcetorch==2.5.0¢+
 $com.github.apple.coremltools.version8.0¢:
-+com.github.apple.coremltools.source_dialectTorchScript≤Œ¶‡§
-main÷§
-*
-inputs 
++com.github.apple.coremltools.source_dialectTorchScript≤«¶Ÿ§
+mainœ§
+)
+image 
 
 
 
 ‡
-‡CoreML5ù§
-CoreML5ê§inputlinear_0j
+‡CoreML5ó§
+CoreML5ä§inputlinear_0j
 const
 input_1_pad_type_0
 *(
@@ -88,14 +88,14 @@ $com.github.apple.coremltools.version8.0¢:
 val
 
 
-p
-const
-inputs_to_fp16_dtype_0
-*,
-name$
-
-"
-inputs_to_fp16_dtype_0*
+n
+const
+image_to_fp16_dtype_0
+*+
+name#
+
+"
+image_to_fp16_dtype_0*
 val
 
 
@@ -137,16 +137,15 @@ $com.github.apple.coremltools.version8.0¢:
 
 
 :
-˙<„πÚ¬…¬R¡mB˚ƒ[Aé
-cast#
-dtype
-
-inputs_to_fp16_dtype_0
-x
-
-
-inputs2
-inputs_to_fp16 
+˙<„πÚ¬…¬R¡mB˚ƒ[Aã
+cast"
+dtype
+
+image_to_fp16_dtype_0
+x	
+
+image1
+image_to_fp16 
 
 
 
@@ -157,7 +156,7 @@ $com.github.apple.coremltools.version8.0¢:
 
 
 "
-cast_3·
+cast_3‡
 conv
 weight
 
@@ -176,10 +175,10 @@ $com.github.apple.coremltools.version8.0¢:
 const_2_to_fp16 
 strides
 
-input_1_strides_0
-x
-
-inputs_to_fp16"
+input_1_strides_0
+x
+
+image_to_fp16"
 pad_type
 
 input_1_pad_type_05
