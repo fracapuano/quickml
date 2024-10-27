@@ -39,6 +39,7 @@ class Status(str, Enum):
 class RequestForm(BaseModel):
     device: Device
     task: Task
+    data: str
 
 class ResponseForm(BaseModel):
     model_architecture: str
