@@ -30,6 +30,12 @@ class Task(str, Enum):
     IMG_DEPTH_ESTIMATION = "img-depth_estimation"
     IMG_OBJECT_DETECTION = "img-object-detection"
 
+
+class Status(str, Enum):
+    PENDING = "pending"
+    COMPLETE = "complete"
+    ERROR = "error"
+
 class RequestForm(BaseModel):
     device: Device
     task: Task
@@ -46,12 +52,16 @@ async def root():
 @app.post("/request_form")
 async def request_form(req: RequestForm) -> ResponseForm:
     global STORE
-    STORE.append({"reuqestForm": req})
+    STORE.append({"reuqest": req, "status":"pending"})
     print(STORE)
     return ResponseForm(
         model_architecture="Max polling a manetta",
         experiment_id=len(STORE)-1
     )
+
+@app.get("/experiment/{experiment_id}")
+async def get_experiment(experiment_id: int):
+    return STORE[experiment_id]
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
