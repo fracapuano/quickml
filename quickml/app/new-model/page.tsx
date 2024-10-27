@@ -283,9 +283,6 @@ export default function Page() {
                           value={experimentDescription}
                           onChange={(e) => setExperimentDescription(e.target.value)}
                         />
-                        <Button type="button" onClick={handleExperimentDescription}>
-                          Suggest Parameters
-                        </Button>
                       </div>
                     )}
                     <div className="flex flex-col justify-between items-centier gap-2">
