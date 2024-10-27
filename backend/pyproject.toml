@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "quickml-backend"
+version = "0.1.0"
+description = "Backend to end2end design, train and deploy custom ML models, to accelerate science"
+authors = ["Francesco Capuano <fc.francescocapuano@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.5.0"
+pydantic = "^2.9.2"
+coremltools = "^8.0"
+xautodl = {git = "https://github.com/D-X-Y/AutoDL-Projects"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

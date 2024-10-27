@@ -11,7 +11,7 @@ class SingleOutputWrapper(nn.Module):
     def forward(self, x):
         _, logits = self.model(x)
         # Return only the first output
-        return logits
+        return nn.functional.softmax(logits)
 
 class MLPackageExporter(BaseModel):
     model_path: str
