@@ -16,6 +16,9 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
+# GLOBAL STORE
+STORE = []
+
 # Models
 class Device(str, Enum):
     IPHONE_12 = "iphone-12"
@@ -33,6 +36,7 @@ class RequestForm(BaseModel):
 
 class ResponseForm(BaseModel):
     model_architecture: str
+    experiment_id: int
 
 # Routes
 @app.get("/")
@@ -41,8 +45,13 @@ async def root():
 
 @app.post("/request_form")
 async def request_form(req: RequestForm) -> ResponseForm:
-    print(RequestForm)
-    return ResponseForm(model_architecture="Max polling a manetta")
+    global STORE
+    STORE.append({"reuqestForm": req})
+    print(STORE)
+    return ResponseForm(
+        model_architecture="Max polling a manetta",
+        experiment_id=len(STORE)-1
+    )
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
