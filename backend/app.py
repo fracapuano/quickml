@@ -56,7 +56,7 @@ async def request_form(req: RequestForm) -> ResponseForm:
     STORE.append({"reuqest": req, "status":"pending"})
     print(STORE)
     return ResponseForm(
-        model_architecture="Max polling a manetta",
+        model_architecture="|nor_conv_3x3~0|+|nor_conv_3x3~0|nor_conv_3x3~1|+|skip_connect~0|nor_conv_3x3~1|nor_conv_3x3~2|",
         experiment_id=len(STORE)-1
     )
 
