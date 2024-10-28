@@ -1,4 +1,4 @@
-# QuickML 🚀🧠
+# QuickML 🚀🧠 - Cambridge University Flywheel Hackathon Winning Submission
 
 ## Bringing real world Machine Learning in labs
 
